@@ -4,6 +4,7 @@ USE db_generation_game_online;
 CREATE TABLE tb_classes(
 id bigint auto_increment,
 tipo varchar(255) not null,
+descricao varchar(255) not null,
 primary key(id)
 );
 
@@ -18,11 +19,11 @@ FOREIGN KEY (classe_id) REFERENCES tb_classes(id)
 );
 
 
-INSERT INTO	tb_classes(tipo) VALUES ("Guerreiro");
-INSERT INTO	tb_classes(tipo) VALUES ("Mago");
-INSERT INTO	tb_classes(tipo) VALUES ("Clerigo");
-INSERT INTO	tb_classes(tipo) VALUES ("Ladrão");
-INSERT INTO	tb_classes(tipo) VALUES ("Feiticeiro");
+INSERT INTO	tb_classes(tipo, descricao) VALUES ("Guerreiro", "Destemido guerreiro que domina a arte da espada e da armadura, protegendo os aliados e enfrentando os inimigos de frente");
+INSERT INTO	tb_classes(tipo, descricao) VALUES ("Mago", "Mestre das artes arcanas, o mago manipula elementos e lança feitiços poderosos, desvendando os segredos do universo");
+INSERT INTO	tb_classes(tipo, descricao) VALUES ("Clerigo", "Servo divino e curador habilidoso, o clérigo traz bênçãos e cura aos feridos, além de ser um farol de esperança nas trevas");
+INSERT INTO	tb_classes(tipo, descricao) VALUES ("Ladrão", "Especialista em furtividade e agilidade, o ladrão domina a arte de desarmar armadilhas, roubar tesouros e se mover nas sombras");
+INSERT INTO	tb_classes(tipo, descricao) VALUES ("Feiticeiro", "Herdeiro de conhecimentos ancestrais, o feiticeiro manipula energias místicas para moldar a realidade e desencadear poderes inimagináveis");
 
 SELECT * FROM tb_classes;
 
